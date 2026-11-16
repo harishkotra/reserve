@@ -20,7 +20,7 @@ contract DeployTestnetForkTest is Test {
     }
 
     function test_full_deploy_then_buy_then_refuse() public {
-        Deployer.Deployed memory d = Deployer.deployTestnet(SEPOLIA_USDC, agent);
+        Deployer.Deployed memory d = Deployer.deployTestnet(SEPOLIA_USDC, agent, 20e8);
 
         // fund the vault with real testnet USDC, as the operator would out of band
         deal(SEPOLIA_USDC, d.vault, 100e6);
@@ -36,6 +36,7 @@ contract DeployTestnetForkTest is Test {
         assertTrue(ok, "buy approved");
         assertGt(IERC20Like(d.stock).balanceOf(d.vault), 0, "stock acquired");
         assertEq(vault.liquidUsdcUsd8(), 75e8);
+        assertEq(vault.totalBookUsd8(), 100e8, "stock leg must count in the book");
 
         // corporate action lands on the market-data source -> the same intent is refused
         MockB20(d.stock).setPaused(true); // corporate action lands on the token itself

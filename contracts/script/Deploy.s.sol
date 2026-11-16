@@ -26,7 +26,10 @@ library Deployer {
         address stock;
     }
 
-    function deployTestnet(address usdc, address agent) internal returns (Deployed memory d) {
+    function deployTestnet(address usdc, address agent, uint256 floorUsd8)
+        internal
+        returns (Deployed memory d)
+    {
         MockB20 stock = new MockB20("Tesla", "TSLAc");
         MockMarketData market = new MockMarketData();
         MockRouter router = new MockRouter();
@@ -36,10 +39,11 @@ library Deployer {
         router.setAsk(address(stock), 250e6);
 
         ReserveVault vault = new ReserveVault(
-            IERC20Like(usdc), market, IReserveSpoke(address(spoke)), ISwapRouter(address(router)), agent, 20e8
+            IERC20Like(usdc), market, IReserveSpoke(address(spoke)), ISwapRouter(address(router)), agent, floorUsd8
         );
         Guard guard = new Guard(market, vault, usdc, 24 hours, 5_000);
         vault.setGuard(guard);
+        vault.addAsset(address(stock)); // without this the stock leg values at zero
 
         // On Sepolia the cash leg is real Circle testnet USDC, funded out of band (faucet / transfer).
         d = Deployed(address(vault), address(guard), address(market), address(stock));

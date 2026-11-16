@@ -1,0 +1,27 @@
+{
+  "base_sepolia": {
+    "chainId": 84532,
+    "deployedAt": "2026-11-16",
+    "agent": "0x4bc2afB1D26531965f51dD4520FA6bA4Db7aFEDE",
+    "vault": "0x7a8B0015be189109458C9b5Cd8b0E63a8958157E",
+    "guard": "0x2Bad3aea1BB2E1DdfF51e062855118879BE4845a",
+    "marketData": "0x61f9378893f123863E5298df4E55f48022Cd6CA5",
+    "stock": "0x89f986e4B964d38A28743410dE0460d879E2d3Af",
+    "usdc": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "reserveFloorUsd8": "500000000",
+    "proof": {
+      "approvedBuy": { "tx": "0xb700ed4f7125d42feb061781cdafd1f2d3fc983ab0ee5bf666b6ab7805a054ba", "block": 59648497, "result": "0.02 TSLAc acquired for $5, cash 20 -> 15" },
+      "refusal": { "tx": "0x46e588c70d244472529994ebe1d2c719fb6c859faa9b207853e6888ca913168e", "block": 59649666, "result": "IntentRefused, reason 0x16f8845d.. = keccak('PAUSED_CORPORATE_ACTION'), cash unchanged at 15" },
+      "bookAfterBuyUsd8": "2000000000"
+    },
+    "mocked": ["TSLAc token (no B20 on any testnet)", "price feed", "lending spoke"]
+  },
+  "base": {
+    "chainId": 8453,
+    "status": "not deployed (zero-spend constraint); byte-identical contracts, same tests",
+    "usdc": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "swapRouter02": "0x2626664c2603336E57B271c5C0b26F421741e481",
+    "aaveEquitiesHub": "0xa4d5947Eb727A052bae69C593FfC84247EC9864E",
+    "open": ["exact Chainlink equity proxy for the chosen ticker (not in the public feed directory yet)", "Aave spoke address from their address book at deploy time"]
+  }
+}
