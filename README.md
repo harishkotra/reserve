@@ -19,6 +19,21 @@ that are wrong. Reserve refuses instead of guessing, and every refusal is an onc
 
 `forge test` -> **18 passed, 0 failed** (12 unit, 5 mainnet-fork parity, 1 full Sepolia deploy flow).
 
+## Deployed on Base Sepolia
+
+* Vault `0x7a8B0015be189109458C9b5Cd8b0E63a8958157E`
+* Guard `0x2Bad3aea1BB2E1DdfF51e062855118879BE4845a`
+* Market data `0x61f9378893f123863E5298df4E55f48022Cd6CA5`
+* TSLAc mock `0x89f986e4B964d38A28743410dE0460d879E2d3Af`
+
+Live proof, both transactions real:
+
+* approved buy `0xb700ed4f…54ba` — 0.02 TSLAc for $5, cash 20 -> 15, book stays $20
+* refusal `0x46e588c7…168e` — same $5 intent while the ticker is paused: `IntentRefused`,
+  reason `0x16f8845d…` = `keccak256("PAUSED_CORPORATE_ACTION")`, cash unchanged
+
+Replay the whole beat with `./scripts/live-demo.sh`.
+
 ## Testnet vs mainnet
 
 Guard and ReserveVault are **byte-identical** on both networks. The only swap is the market-data
