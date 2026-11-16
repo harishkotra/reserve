@@ -1,0 +1,27 @@
+{
+  "_note": "One artifact set, two networks. Addresses are the only difference.",
+  "base": {
+    "chainId": 8453,
+    "rpc": "https://mainnet.base.org",
+    "explorer": "https://basescan.org",
+    "usdc": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "swapRouter02": "0x2626664c2603336E57B271c5C0b26F421741e481",
+    "b20PolicyRegistry": "0x8453000000000000000000000000000000000002",
+    "aave": {
+      "equitiesHub": "0xa4d5947Eb727A052bae69C593FfC84247EC9864E",
+      "spoke": "TODO_read_from_aave_address_book_at_deploy"
+    },
+    "marketData": "BaseMainnetMarketData",
+    "assets": {
+      "TSLAc": { "token": "TODO_from_api_coinbase_com_v1_tokenized_stocks", "chainlink": "TODO_reference-data-directory_assetClass_equity" }
+    }
+  },
+  "base_sepolia": {
+    "chainId": 84532,
+    "rpc": "https://sepolia.base.org",
+    "explorer": "https://sepolia.basescan.org",
+    "usdc": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "marketData": "MockMarketData",
+    "assets": { "TSLAc": { "token": "MockB20(8dp)", "chainlink": "MockMarketData" } }
+  }
+}
