@@ -1,0 +1,17 @@
+{
+  "name": "reserve-agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "loop": "tsx src/loop.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

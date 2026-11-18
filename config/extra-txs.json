@@ -1,0 +1,9 @@
+{
+  "note": "transactions sent by hand (cast) rather than by the agent loop; folded into the ledger so nothing is hidden",
+  "txs": [
+    "0xb700ed4f7125d42feb061781cdafd1f2d3fc983ab0ee5bf666b6ab7805a054ba",
+    "0xd4e9736d57e81374d50d9eb931f34b4f1377dbb9409b25f5ce9ef5cc7e68aa7a",
+    "0x46e588c70d244472529994ebe1d2c719fb6c859faa9b207853e6888ca913168e",
+    "0x296a575ceea616e0ca9a08d5aded47e5153f3ce516bbd26f9f7bc879d4c300b0"
+  ]
+}

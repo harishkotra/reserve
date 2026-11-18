@@ -1,0 +1,101 @@
+{
+  "byReason": {
+    "PAUSED_CORPORATE_ACTION": {
+      "tx": "0x46e588c70d244472529994ebe1d2c719fb6c859faa9b207853e6888ca913168e",
+      "block": 59649666,
+      "amountUsd": 5
+    },
+    "FEED_STALE": {
+      "tx": "0xec0f108bc3c212004261cdcee3c5382c990bf5974195865759efaaec5e18f683",
+      "block": 60487536,
+      "amountUsd": 200
+    },
+    "RESERVE_FLOOR_BREACH": {
+      "tx": "0x296a575ceea616e0ca9a08d5aded47e5153f3ce516bbd26f9f7bc879d4c300b0",
+      "block": 60491837,
+      "amountUsd": 7
+    }
+  },
+  "chain": "Base Sepolia",
+  "vault": "0x7a8B0015be189109458C9b5Cd8b0E63a8958157E",
+  "guard": "0x2Bad3aea1BB2E1DdfF51e062855118879BE4845a",
+  "stock": "0x89f986e4B964d38A28743410dE0460d879E2d3Af",
+  "symbol": "TSLAc",
+  "bookUsd": 20,
+  "liquidUsd": 11,
+  "stockUsd": 9,
+  "floorUsd": 5,
+  "debtUsd": 0,
+  "price": 250,
+  "feedAgeSec": 823,
+  "paused": false,
+  "multiplier": 1,
+  "multiplierPending": false,
+  "totalIntents": 17,
+  "refusedCount": 14,
+  "events": [
+    {
+      "refused": true,
+      "reason": "RESERVE_FLOOR_BREACH",
+      "amountUsd": 7,
+      "tx": "0x296a575ceea616e0ca9a08d5aded47e5153f3ce516bbd26f9f7bc879d4c300b0",
+      "block": 60491837
+    },
+    {
+      "refused": false,
+      "reason": null,
+      "amountUsd": 2,
+      "tx": "0x32d6765d72766d452c8bf4c992549a76bc2ac641618c053c14ec769dbaaa1c75",
+      "block": 60488024
+    },
+    {
+      "refused": false,
+      "reason": null,
+      "amountUsd": 2,
+      "tx": "0x372a5f9a4fb8f556ab36cf338f1c91875c7dd39e7e518204a0d3c384d2d29e7f",
+      "block": 60488004
+    },
+    {
+      "refused": true,
+      "reason": "RESERVE_FLOOR_BREACH",
+      "amountUsd": 200,
+      "tx": "0xf4ca40480c5ef85d86e4887a1ce1f2f42db902195fee7e90995c9d282572d388",
+      "block": 60487706
+    },
+    {
+      "refused": true,
+      "reason": "RESERVE_FLOOR_BREACH",
+      "amountUsd": 200,
+      "tx": "0xc9d94b620c3551b5006820c57c3466b9a228424c4fce4a3ca2ca6ea488c2af0c",
+      "block": 60487687
+    },
+    {
+      "refused": true,
+      "reason": "RESERVE_FLOOR_BREACH",
+      "amountUsd": 200,
+      "tx": "0x8aef01cd7d58922289bf0cac27e13f7bbf09e74d9f17cf08782e99a95b55e68f",
+      "block": 60487667
+    },
+    {
+      "refused": true,
+      "reason": "RESERVE_FLOOR_BREACH",
+      "amountUsd": 200,
+      "tx": "0xbf535e89bcbf7bf008c24a0a85fbe3be688a6dcb5a0dd54f544da5bc31134909",
+      "block": 60487648
+    },
+    {
+      "refused": true,
+      "reason": "RESERVE_FLOOR_BREACH",
+      "amountUsd": 200,
+      "tx": "0x5d570089d2b310e0833e0d9513458c2fd599b6233c9538419d4c6bdfb2972a91",
+      "block": 60487627
+    },
+    {
+      "refused": true,
+      "reason": "RESERVE_FLOOR_BREACH",
+      "amountUsd": 200,
+      "tx": "0x25428ffec26746143c52dee3e0e4906337e29273b4a6f88a69ec7375e76bc41a",
+      "block": 60487607
+    }
+  ]
+}

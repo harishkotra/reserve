@@ -16,6 +16,9 @@ that are wrong. Reserve refuses instead of guessing, and every refusal is an onc
 | Market-data seam: one interface, two adapters | `contracts/src/interfaces/IMarketData.sol`, `contracts/src/BaseMainnetMarketData.sol` | done |
 | Testnet deploy, simulated on a Sepolia fork with real Circle USDC | `contracts/script/Deploy.s.sol`, `contracts/test/Deploy.t.sol` | done |
 | Mainnet parity on a live Base fork (read-only, no spend) | `contracts/test/Parity.t.sol` | done |
+| Agent loop that asks the guard, then broadcasts even the refusals | `agent/src/loop.ts` | done, running |
+| Paid risk-oracle API (x402 v2) | `service/src/index.ts` | 402 challenge verified; settlement needs 1 USDC in the payer wallet |
+| Dashboard reading the vault live | `web/index.html` + `scripts/snapshot.mjs` | done |
 
 `forge test` -> **18 passed, 0 failed** (12 unit, 5 mainnet-fork parity, 1 full Sepolia deploy flow).
 
@@ -70,12 +73,30 @@ forge test                                  # all 18
 forge test --match-contract ParityTest      # live Base mainnet reads, zero spend
 ./scripts/probe-mainnet.sh                  # prints the exact values the adapter consumes
 forge script contracts/script/Deploy.s.sol  # deploy (see config/chains.json for addresses)
+node scripts/snapshot.mjs                   # rebuild the dashboard state from receipts
+cd web && python3 -m http.server 8099       # dashboard at localhost:8099
 ```
 
-## The 30-second demo
+## The ledger as it stands
 
-1. Agent buys $25 of TSLAc through the vault — approved, event emitted.
-2. A dividend lands: multiplier scheduled, feed frozen. Same intent -> `PAUSED_CORPORATE_ACTION`,
-   no cash leaves the vault.
-3. The unguarded control path takes the same trade one block later and shows the position
-   underwater against the new multiplier.
+`node scripts/snapshot.mjs` rebuilds `web/state.json` from the receipts of every transaction the
+agent (and the hand-run demos) actually sent. Right now that is **17 intents, 14 refusals, 3
+settlements**, with refusals carrying one of three reason hashes:
+
+| reason | what it means | proof |
+|---|---|---|
+| `PAUSED_CORPORATE_ACTION` | the ticker is paused for a split or dividend | `0x46e588c7…168e` |
+| `FEED_STALE` | the price feed is older than the 24h tolerance | `0xec0f108b…f683` |
+| `RESERVE_FLOOR_BREACH` | the trade would spend below the operating floor | `0x296a575c…00b0` |
+
+Every refusal is an onchain log, so the count is checkable without trusting this README.
+
+## The demo video
+
+`assets/video/reserve-demo-silent.mp4` — 67s, 1920x1080, no audio on purpose. The narration to
+record over it is `docs/narration.md`, timed per slide.
+
+```bash
+./scripts/make-video.sh     # re-render slides + reassemble
+./scripts/reencode.sh       # re-time existing slides to the narration
+```

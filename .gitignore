@@ -1,3 +1,9 @@
 .env.local
 contracts/out/
 contracts/cache/
+node_modules/
+agent/node_modules/
+service/node_modules/
+assets/video/clips/
+assets/video/list.txt
+assets/posts/*.html

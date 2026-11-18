@@ -1,0 +1,46 @@
+{"ts":"2026-11-18T16:28:59.906Z","event":"boot","agent":"0x4bc2afB1D26531965f51dD4520FA6bA4Db7aFEDE","vault":"0x7a8B0015be189109458C9b5Cd8b0E63a8958157E","stock":"0x89f986e4B964d38A28743410dE0460d879E2d3Af","cycles":1}
+{"ts":"2026-11-18T16:29:00.222Z","event":"snapshot","cycle":0,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":true}
+{"ts":"2026-11-18T16:29:00.469Z","event":"guard_says_no","cycle":0,"reason":"0x16f8845dcae5e850eef5e63425bb9c683cb1faf23e9034270ae38526b31a2979","decision":"do not trade"}
+{"ts":"2026-11-18T16:29:04.471Z","event":"halt"}
+{"ts":"2026-11-18T16:29:13.608Z","event":"boot","agent":"0x4bc2afB1D26531965f51dD4520FA6bA4Db7aFEDE","vault":"0x7a8B0015be189109458C9b5Cd8b0E63a8958157E","stock":"0x89f986e4B964d38A28743410dE0460d879E2d3Af","cycles":6}
+{"ts":"2026-11-18T16:29:13.946Z","event":"snapshot","cycle":0,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:15.645Z","event":"refused_onchain","cycle":0,"tx":"0x085fecbb31c2055e52e36d2d24b2b38149fc97a1604413371e3f0292c70390c0","block":60487434,"reason":"0x30fe9211318a9b71263b4f045892f4fd3dc2322b723b935db91f728dc82e08cf","decision":"do not trade","bookUnchanged":true}
+{"ts":"2026-11-18T16:29:18.078Z","event":"snapshot","cycle":1,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:19.590Z","event":"refused_onchain","cycle":1,"tx":"0xe87609d0ea46811b62c1f6e5e0f233e9cabceb909814cd48671018a6ea38403f","block":60487454,"reason":"0x30fe9211318a9b71263b4f045892f4fd3dc2322b723b935db91f728dc82e08cf","decision":"do not trade","bookUnchanged":true}
+{"ts":"2026-11-18T16:29:22.039Z","event":"snapshot","cycle":2,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:23.492Z","event":"refused_onchain","cycle":2,"tx":"0x28f8cfa0587355fcdc9b53d6904bdb61608a306587dc0f3f6692812622ea6bd6","block":60487473,"reason":"0x30fe9211318a9b71263b4f045892f4fd3dc2322b723b935db91f728dc82e08cf","decision":"do not trade","bookUnchanged":true}
+{"ts":"2026-11-18T16:29:26.414Z","event":"snapshot","cycle":3,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:28.069Z","event":"refused_onchain","cycle":3,"tx":"0x50ac17b27a41d11678592ca5ab941cca69045d0b2c0a9ce3a563abc370e2b796","block":60487496,"reason":"0x30fe9211318a9b71263b4f045892f4fd3dc2322b723b935db91f728dc82e08cf","decision":"do not trade","bookUnchanged":true}
+{"ts":"2026-11-18T16:29:30.605Z","event":"snapshot","cycle":4,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:32.176Z","event":"refused_onchain","cycle":4,"tx":"0x4a73b6052abeef36f14351624f2c7166461df62c95bdcf1ddd9a9d71a8051df4","block":60487516,"reason":"0x30fe9211318a9b71263b4f045892f4fd3dc2322b723b935db91f728dc82e08cf","decision":"do not trade","bookUnchanged":true}
+{"ts":"2026-11-18T16:29:34.613Z","event":"snapshot","cycle":5,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:36.071Z","event":"refused_onchain","cycle":5,"tx":"0xec0f108bc3c212004261cdcee3c5382c990bf5974195865759efaaec5e18f683","block":60487536,"reason":"0x30fe9211318a9b71263b4f045892f4fd3dc2322b723b935db91f728dc82e08cf","decision":"do not trade","bookUnchanged":true}
+{"ts":"2026-11-18T16:29:38.272Z","event":"halt"}
+{"ts":"2026-11-18T16:29:48.381Z","event":"boot","agent":"0x4bc2afB1D26531965f51dD4520FA6bA4Db7aFEDE","vault":"0x7a8B0015be189109458C9b5Cd8b0E63a8958157E","stock":"0x89f986e4B964d38A28743410dE0460d879E2d3Af","cycles":6}
+{"ts":"2026-11-18T16:29:48.711Z","event":"snapshot","cycle":0,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:50.257Z","event":"executed","cycle":0,"tx":"0x25428ffec26746143c52dee3e0e4906337e29273b4a6f88a69ec7375e76bc41a","block":60487607,"gasUsed":72444}
+{"ts":"2026-11-18T16:29:52.703Z","event":"snapshot","cycle":1,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:54.215Z","event":"executed","cycle":1,"tx":"0x5d570089d2b310e0833e0d9513458c2fd599b6233c9538419d4c6bdfb2972a91","block":60487627,"gasUsed":72444}
+{"ts":"2026-11-18T16:29:56.688Z","event":"snapshot","cycle":2,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:29:58.388Z","event":"executed","cycle":2,"tx":"0xbf535e89bcbf7bf008c24a0a85fbe3be688a6dcb5a0dd54f544da5bc31134909","block":60487648,"gasUsed":72444}
+{"ts":"2026-11-18T16:30:00.855Z","event":"snapshot","cycle":3,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:30:02.342Z","event":"executed","cycle":3,"tx":"0x8aef01cd7d58922289bf0cac27e13f7bbf09e74d9f17cf08782e99a95b55e68f","block":60487667,"gasUsed":72444}
+{"ts":"2026-11-18T16:30:04.804Z","event":"snapshot","cycle":4,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:30:06.254Z","event":"executed","cycle":4,"tx":"0xc9d94b620c3551b5006820c57c3466b9a228424c4fce4a3ca2ca6ea488c2af0c","block":60487687,"gasUsed":72444}
+{"ts":"2026-11-18T16:30:08.728Z","event":"snapshot","cycle":5,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:30:10.156Z","event":"executed","cycle":5,"tx":"0xf4ca40480c5ef85d86e4887a1ce1f2f42db902195fee7e90995c9d282572d388","block":60487706,"gasUsed":72444}
+{"ts":"2026-11-18T16:30:12.359Z","event":"halt"}
+{"ts":"2026-11-18T16:31:07.881Z","event":"boot","agent":"0x4bc2afB1D26531965f51dD4520FA6bA4Db7aFEDE","vault":"0x7a8B0015be189109458C9b5Cd8b0E63a8958157E","stock":"0x89f986e4B964d38A28743410dE0460d879E2d3Af","cycles":6}
+{"ts":"2026-11-18T16:31:08.189Z","event":"snapshot","cycle":0,"book":"$20","liquid":"$15","stock":"$5","stockShare":"0.250","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:31:09.770Z","event":"executed","cycle":0,"tx":"0x372a5f9a4fb8f556ab36cf338f1c91875c7dd39e7e518204a0d3c384d2d29e7f","block":60488004,"gasUsed":115533,"reason":null}
+{"ts":"2026-11-18T16:31:12.212Z","event":"snapshot","cycle":1,"book":"$20","liquid":"$13","stock":"$7","stockShare":"0.350","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:31:13.694Z","event":"executed","cycle":1,"tx":"0x32d6765d72766d452c8bf4c992549a76bc2ac641618c053c14ec769dbaaa1c75","block":60488024,"gasUsed":115533,"reason":null}
+{"ts":"2026-11-18T16:31:16.217Z","event":"snapshot","cycle":2,"book":"$20","liquid":"$11","stock":"$9","stockShare":"0.450","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:31:16.217Z","event":"idle","cycle":2,"reason":"at_target"}
+{"ts":"2026-11-18T16:31:18.659Z","event":"snapshot","cycle":3,"book":"$20","liquid":"$11","stock":"$9","stockShare":"0.450","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:31:18.659Z","event":"idle","cycle":3,"reason":"at_target"}
+{"ts":"2026-11-18T16:31:21.115Z","event":"snapshot","cycle":4,"book":"$20","liquid":"$11","stock":"$9","stockShare":"0.450","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:31:21.115Z","event":"idle","cycle":4,"reason":"at_target"}
+{"ts":"2026-11-18T16:31:23.737Z","event":"snapshot","cycle":5,"book":"$20","liquid":"$11","stock":"$9","stockShare":"0.450","price8":"25000000000","paused":false}
+{"ts":"2026-11-18T16:31:23.737Z","event":"idle","cycle":5,"reason":"at_target"}
+{"ts":"2026-11-18T16:31:25.939Z","event":"halt"}
