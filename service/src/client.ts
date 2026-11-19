@@ -21,4 +21,6 @@ const f = wrapFetchWithPaymentFromConfig(fetch, {
 const url = process.argv[2] ?? `http://localhost:8787/verdict/${d.stock}`;
 const res = await f(url, { method: "GET" });
 const body = await res.json();
-console.log(JSON.stringify({ status: res.status, paid: res.headers.get("PAYMENT-RESPONSE") ? true : false, body }, null, 2));
+const hdr = res.headers.get("PAYMENT-RESPONSE");
+const decoded = hdr ? JSON.parse(Buffer.from(hdr, "base64").toString("utf8")) : null;
+console.log(JSON.stringify({ status: res.status, paid: Boolean(hdr), settlement: decoded, body }, null, 2));

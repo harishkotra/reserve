@@ -17,7 +17,7 @@ that are wrong. Reserve refuses instead of guessing, and every refusal is an onc
 | Testnet deploy, simulated on a Sepolia fork with real Circle USDC | `contracts/script/Deploy.s.sol`, `contracts/test/Deploy.t.sol` | done |
 | Mainnet parity on a live Base fork (read-only, no spend) | `contracts/test/Parity.t.sol` | done |
 | Agent loop that asks the guard, then broadcasts even the refusals | `agent/src/loop.ts` | done, running |
-| Paid risk-oracle API (x402 v2) | `service/src/index.ts` | 402 challenge verified; settlement needs 1 USDC in the payer wallet |
+| Paid risk-oracle API (x402 v2) | `service/src/index.ts`, `service/src/client.ts` | done, settled onchain |
 | Dashboard reading the vault live | `web/index.html` + `scripts/snapshot.mjs` | done |
 
 `forge test` -> **18 passed, 0 failed** (12 unit, 5 mainnet-fork parity, 1 full Sepolia deploy flow).
@@ -90,6 +90,20 @@ settlements**, with refusals carrying one of three reason hashes:
 | `RESERVE_FLOOR_BREACH` | the trade would spend below the operating floor | `0x296a575c…00b0` |
 
 Every refusal is an onchain log, so the count is checkable without trusting this README.
+
+## Paid for its own data
+
+`service/` is an x402 v2 risk oracle: `GET /verdict/:asset` returns 402 with a
+`PAYMENT-REQUIRED` header until the caller pays $0.001 in USDC on Base Sepolia. The agent's own
+wallet paid it and got the guard verdict back:
+
+* settlement tx `0xbea25be8…482f`, block 60921570, `Transfer` of `0x3e8` (0.001 USDC)
+* response: `safe: false`, `refusalReason: FEED_STALE` — the oracle sells the refusal, not a price
+
+```bash
+cd service && npm i && npx tsx src/index.ts     # :8787
+cd service && npx tsx src/client.ts             # pays and prints the settlement receipt
+```
 
 ## The demo video
 

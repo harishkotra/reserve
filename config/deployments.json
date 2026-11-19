@@ -10,11 +10,32 @@
     "usdc": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
     "reserveFloorUsd8": "500000000",
     "proof": {
-      "approvedBuy": { "tx": "0xb700ed4f7125d42feb061781cdafd1f2d3fc983ab0ee5bf666b6ab7805a054ba", "block": 59648497, "result": "0.02 TSLAc acquired for $5, cash 20 -> 15" },
-      "refusal": { "tx": "0x46e588c70d244472529994ebe1d2c719fb6c859faa9b207853e6888ca913168e", "block": 59649666, "result": "IntentRefused, reason 0x16f8845d.. = keccak('PAUSED_CORPORATE_ACTION'), cash unchanged at 15" },
+      "approvedBuy": {
+        "tx": "0xb700ed4f7125d42feb061781cdafd1f2d3fc983ab0ee5bf666b6ab7805a054ba",
+        "block": 59648497,
+        "result": "0.02 TSLAc acquired for $5, cash 20 -> 15"
+      },
+      "refusal": {
+        "tx": "0x46e588c70d244472529994ebe1d2c719fb6c859faa9b207853e6888ca913168e",
+        "block": 59649666,
+        "result": "IntentRefused, reason 0x16f8845d.. = keccak('PAUSED_CORPORATE_ACTION'), cash unchanged at 15"
+      },
       "bookAfterBuyUsd8": "2000000000"
     },
-    "mocked": ["TSLAc token (no B20 on any testnet)", "price feed", "lending spoke"]
+    "mocked": [
+      "TSLAc token (no B20 on any testnet)",
+      "price feed",
+      "lending spoke"
+    ],
+    "x402": {
+      "priceUsd": "0.001",
+      "endpoint": "/verdict/:asset",
+      "network": "eip155:84532",
+      "payer": "0x4bc2afB1D26531965f51dD4520FA6bA4Db7aFEDE",
+      "settlementTx": "0xbea25be8772792b81a4fa97b44b2f7571c8eed18ca672c4bb321d0053799482f",
+      "block": 60921570,
+      "note": "paid risk-oracle call settled onchain; amount 0x3e8 = 0.001 USDC"
+    }
   },
   "base": {
     "chainId": 8453,
@@ -22,6 +43,9 @@
     "usdc": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     "swapRouter02": "0x2626664c2603336E57B271c5C0b26F421741e481",
     "aaveEquitiesHub": "0xa4d5947Eb727A052bae69C593FfC84247EC9864E",
-    "open": ["exact Chainlink equity proxy for the chosen ticker (not in the public feed directory yet)", "Aave spoke address from their address book at deploy time"]
+    "open": [
+      "exact Chainlink equity proxy for the chosen ticker (not in the public feed directory yet)",
+      "Aave spoke address from their address book at deploy time"
+    ]
   }
 }
