@@ -2,6 +2,8 @@
 
 An autonomous stock agent on Base that will not trade its owner into a corporate action.
 
+**Live book:** https://reserve-book.vercel.app · **Contracts:** Base Sepolia, below · **Tests:** 18 passing
+
 Base's tokenized stocks (B20) pay dividends and split by changing a **multiplier** on the token,
 not by moving balances. During a corporate action the ticker pauses. Chainlink's tokenized-equity
 feed freezes outside 24/5. Every one of those events makes a normal trading bot reason on numbers

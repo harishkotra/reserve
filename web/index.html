@@ -83,5 +83,5 @@ el("events").innerHTML = s.events.slice().reverse().map(e => `
   <span>${e.refused ? e.reason : "buy settled · "+e.amountUsd.toFixed(2)+" USDC"}<br>
   <span style="color:var(--dim);font-size:11px">block ${e.block} · tx ${e.tx.slice(0,18)}…</span></span>
   <a href="https://sepolia.basescan.org/tx/${e.tx}" target="_blank">basescan ↗</a></div>`).join("");
-el("foot").textContent = `${s.totalIntents} intents onchain · ${s.refusedCount} refused · stock leg is a mock B20 (no B20 exists on any testnet) · prices from a mock oracle`;
+el("foot").textContent = `snapshot · ${s.totalIntents} intents onchain · ${s.refusedCount} refused · stock leg is a mock B20 (no B20 exists on any testnet) · prices from a mock oracle`;
 </script></body></html>
