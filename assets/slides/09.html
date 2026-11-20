@@ -1,13 +1,55 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:BaseSans;src:url(../../web/assets/fonts/BaseSans-Regular.woff2) format("woff2");font-weight:400}
+@font-face{font-family:BaseSans;src:url(../../web/assets/fonts/BaseSans-Medium.woff2) format("woff2");font-weight:500}
+@font-face{font-family:BaseSans;src:url(../../web/assets/fonts/BaseSans-Bold.woff2) format("woff2");font-weight:700}
+@font-face{font-family:PlexMono;src:url(../../web/assets/fonts/PlexMono-400.woff2) format("woff2");font-weight:400}
+@font-face{font-family:PlexMono;src:url(../../web/assets/fonts/PlexMono-500.woff2) format("woff2");font-weight:500}
 *{margin:0;box-sizing:border-box}
-body{width:1920px;height:1080px;background:#08090b;color:#e9eef4;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;padding:110px 140px;display:flex;flex-direction:column;justify-content:space-between}
-.kick{font-size:20px;letter-spacing:.34em;color:#7c858f}
-h1{font-size:86px;line-height:1.03;letter-spacing:-.03em;font-weight:600;margin-top:26px}
-.body{font-size:30px;line-height:1.6;color:#98a2ad;max-width:1480px}
-.foot{font-size:19px;color:#5d6670;letter-spacing:.04em;border-top:1px solid #1b1f24;padding-top:26px;word-break:break-all}
-.bar{position:absolute;left:0;top:0;height:5px;width:100%;background:#7c858f}
+body{width:1920px;height:1080px;background:#fff;color:#05060a;font-family:BaseSans,sans-serif;
+     display:flex;flex-direction:column;padding:0}
+.blue{height:8px;background:#0052FF;flex:none}
+.top{display:flex;align-items:center;justify-content:space-between;padding:34px 90px 26px;flex:none}
+.brand{display:flex;align-items:center;gap:18px}
+.brand img{height:30px}
+.brand .div{width:1px;height:26px;background:#e2e6f0}
+.brand .nm{font-weight:700;font-size:24px;letter-spacing:-.01em}
+.brand .sb{font-family:PlexMono;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#6b7280;margin-top:2px}
+.chip{font-family:PlexMono;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#0052FF;
+      background:#f4f7ff;border:1px solid #d5deff;padding:9px 14px;border-radius:999px}
+.rule{height:1px;background:#05060a;margin:0 90px;flex:none}
+.main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 90px 30px;min-height:0}
+.kick{font-family:PlexMono;font-size:17px;letter-spacing:.2em;text-transform:uppercase;color:#6b7280;
+       display:flex;align-items:center;gap:14px;margin-bottom:34px}
+.kick::before{content:"";width:40px;height:3px;background:#0052FF}
+h1{font-size:104px;line-height:.97;letter-spacing:-.045em;font-weight:700}
+h1.med{font-size:96px}
+.body{margin-top:34px;font-size:33px;line-height:1.5;color:#2b2f3a;max-width:1420px}
+.body b{font-weight:500}
+.foot{flex:none;display:flex;align-items:baseline;justify-content:space-between;gap:30px;
+       margin:0 90px;border-top:1px solid #e2e6f0;padding:26px 0 40px}
+.foot .l{font-family:PlexMono;font-size:16px;color:#6b7280;letter-spacing:.03em;word-break:break-all}
+.foot .r{font-family:PlexMono;font-size:14px;color:#6b7280;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.two{display:grid;grid-template-columns:1fr 760px;gap:56px;align-items:center}
+.shot{border:1px solid #05060a;border-radius:12px;overflow:hidden;height:600px;position:relative}
+.shot img{width:100%;display:block;margin-top:-2px}
+.shot::after{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:#0052FF}
 </style></head><body>
-<div class="bar"></div>
-<div><div class="kick">RESERVE</div><h1>Refusal is the product.</h1></div>
-<div class="body">Not a safer trade. A trade that never happens<br>when the data cannot be trusted.</div><div class="foot">@HarishKotra · Base Sepolia</div>
+<div class="blue"></div>
+<div class="top">
+  <div class="brand"><img src="../../web/assets/brand/basemark-black.svg"><span class="div"></span>
+    <div><div class="nm">Reserve</div><div class="sb">Refusal ledger</div></div></div>
+  <div class="chip">Base Sepolia · 84532</div>
+</div>
+<div class="rule"></div>
+<div class="main">
+  <div class="">
+    <div>
+      <div class="kick">RESERVE</div>
+      <h1 class="">Refusal is the product.</h1>
+    </div>
+    
+  </div>
+  <div class="body">Not a safer trade. A trade that never happens<br>when the data cannot be trusted.</div>
+</div>
+<div class="foot"><div class="l">@HarishKotra · Base Sepolia</div><div class="r">09 / 09 · reserve-book.vercel.app</div></div>
 </body></html>

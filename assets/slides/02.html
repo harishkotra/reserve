@@ -1,13 +1,42 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:BaseSans;src:url(../../web/assets/fonts/BaseSans-Regular.woff2) format("woff2");font-weight:400}
+@font-face{font-family:BaseSans;src:url(../../web/assets/fonts/BaseSans-Medium.woff2) format("woff2");font-weight:500}
+@font-face{font-family:BaseSans;src:url(../../web/assets/fonts/BaseSans-Bold.woff2) format("woff2");font-weight:700}
+@font-face{font-family:PlexMono;src:url(../../web/assets/fonts/PlexMono-400.woff2) format("woff2")}
 *{margin:0;box-sizing:border-box}
-body{width:1920px;height:1080px;background:#08090b;color:#e9eef4;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;padding:110px 140px;display:flex;flex-direction:column;justify-content:space-between}
-.kick{font-size:20px;letter-spacing:.34em;color:#7c858f}
-h1{font-size:86px;line-height:1.03;letter-spacing:-.03em;font-weight:600;margin-top:26px}
-.body{font-size:30px;line-height:1.6;color:#98a2ad;max-width:1480px}
-.foot{font-size:19px;color:#5d6670;letter-spacing:.04em;border-top:1px solid #1b1f24;padding-top:26px;word-break:break-all}
-.bar{position:absolute;left:0;top:0;height:5px;width:22%;background:#7c858f}
+body{width:1920px;height:1080px;background:#fff;color:#05060a;font-family:BaseSans,sans-serif;display:flex;flex-direction:column}
+.blue{height:8px;background:#0052FF;flex:none}
+.top{display:flex;align-items:center;justify-content:space-between;padding:30px 90px 22px;flex:none}
+.brand{display:flex;align-items:center;gap:18px}
+.brand img{height:28px}
+.brand .div{width:1px;height:24px;background:#e2e6f0}
+.brand .nm{font-weight:700;font-size:23px;letter-spacing:-.01em}
+.brand .sb{font-family:PlexMono;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6b7280;margin-top:2px}
+.chip{font-family:PlexMono;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#0052FF;background:#f4f7ff;border:1px solid #d5deff;padding:8px 13px;border-radius:999px}
+.rule{height:1px;background:#05060a;margin:0 90px;flex:none}
+.main{flex:1;padding:34px 90px 0;display:flex;flex-direction:column;align-items:center}
+.head{width:1240px;display:flex;align-items:baseline;gap:26px}
+.kick{font-family:PlexMono;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:#6b7280;display:flex;align-items:center;gap:12px;flex:none}
+.kick::before{content:"";width:34px;height:3px;background:#0052FF}
+h1{font-size:62px;line-height:1;letter-spacing:-.035em;font-weight:700}
+.stats{margin-left:auto;font-family:PlexMono;font-size:15px;color:#6b7280;letter-spacing:.02em;text-align:right;line-height:1.55}
+.stats b{color:#05060a;font-weight:500}
+.shot{width:1440px;margin-top:26px;border:1px solid #05060a;border-radius:10px;overflow:hidden;position:relative;line-height:0}
+.shot img{width:1440px;display:block}
+.shot::after{content:"";position:absolute;top:0;bottom:0;left:0;width:5px;background:#0052FF}
+.foot{flex:none;display:flex;align-items:baseline;justify-content:space-between;margin:0 90px;border-top:1px solid #e2e6f0;padding:18px 0 30px}
+.foot .l{font-family:PlexMono;font-size:15px;color:#6b7280}
+.foot .r{font-family:PlexMono;font-size:13px;color:#6b7280;letter-spacing:.14em;text-transform:uppercase}
 </style></head><body>
-<div class="bar"></div>
-<div><div class="kick">THE BOOK</div><h1>$20.00 under management</h1></div>
-<div class="body">&#9679; $9.00 tokenized stock &nbsp;&nbsp; &#9679; $11.00 liquid USDC<br>Operating reserve floor: $5.00 · Debt: $0.00</div><div class="foot">every number read from Base Sepolia, not typed</div>
+<div class="blue"></div>
+<div class="top"><div class="brand"><img src="../../web/assets/brand/basemark-black.svg"><span class="div"></span>
+ <div><div class="nm">Reserve</div><div class="sb">Refusal ledger</div></div></div>
+ <div class="chip">Base Sepolia · 84532</div></div>
+<div class="rule"></div>
+<div class="main">
+ <div class="head"><div class="kick">The book</div><h1>$20.00 under management</h1>
+  <div class="stats"><b>$11.00</b> liquid USDC · <b>$9.00</b> stock<br>floor <b>$5.00</b> · debt <b>$0.00</b> · headroom <b>$6.00</b></div></div>
+ <div class="shot"><img src="hero_band.png"></div>
+</div>
+<div class="foot"><div class="l">every number read from Base Sepolia, not typed</div><div class="r">02 / 09 · reserve-book.vercel.app</div></div>
 </body></html>

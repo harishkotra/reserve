@@ -8,3 +8,6 @@ assets/video/clips/
 assets/video/list.txt
 assets/posts/*.html
 .vercel
+assets/video/*.mp4
+assets/video/*.mov
+assets/video/*.m4a
