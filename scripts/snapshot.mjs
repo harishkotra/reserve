@@ -50,7 +50,7 @@ const NAMES = {
   "0x0caa0e47682677d3250111072622f28de8dad347a79c2ef5dc835e48117bcee9":"LTV_EXCEEDED",
 };
 const REF = "0xcfb64b44f4fdef514927cadc0d1852c6feab17389454e02463217541a2779e1e";
-const events = logs.slice(-9).reverse().map((l) => {
+const events = logs.slice().reverse().map((l) => {
   const refused = l.topics[0] === REF;
   return {
     refused,

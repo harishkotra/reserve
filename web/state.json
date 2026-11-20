@@ -27,7 +27,7 @@
   "floorUsd": 5,
   "debtUsd": 0,
   "price": 250,
-  "feedAgeSec": 823,
+  "feedAgeSec": 146672,
   "paused": false,
   "multiplier": 1,
   "multiplierPending": false,
@@ -96,6 +96,62 @@
       "amountUsd": 200,
       "tx": "0x25428ffec26746143c52dee3e0e4906337e29273b4a6f88a69ec7375e76bc41a",
       "block": 60487607
+    },
+    {
+      "refused": true,
+      "reason": "FEED_STALE",
+      "amountUsd": 200,
+      "tx": "0xec0f108bc3c212004261cdcee3c5382c990bf5974195865759efaaec5e18f683",
+      "block": 60487536
+    },
+    {
+      "refused": true,
+      "reason": "FEED_STALE",
+      "amountUsd": 200,
+      "tx": "0x4a73b6052abeef36f14351624f2c7166461df62c95bdcf1ddd9a9d71a8051df4",
+      "block": 60487516
+    },
+    {
+      "refused": true,
+      "reason": "FEED_STALE",
+      "amountUsd": 200,
+      "tx": "0x50ac17b27a41d11678592ca5ab941cca69045d0b2c0a9ce3a563abc370e2b796",
+      "block": 60487496
+    },
+    {
+      "refused": true,
+      "reason": "FEED_STALE",
+      "amountUsd": 200,
+      "tx": "0x28f8cfa0587355fcdc9b53d6904bdb61608a306587dc0f3f6692812622ea6bd6",
+      "block": 60487473
+    },
+    {
+      "refused": true,
+      "reason": "FEED_STALE",
+      "amountUsd": 200,
+      "tx": "0xe87609d0ea46811b62c1f6e5e0f233e9cabceb909814cd48671018a6ea38403f",
+      "block": 60487454
+    },
+    {
+      "refused": true,
+      "reason": "FEED_STALE",
+      "amountUsd": 200,
+      "tx": "0x085fecbb31c2055e52e36d2d24b2b38149fc97a1604413371e3f0292c70390c0",
+      "block": 60487434
+    },
+    {
+      "refused": true,
+      "reason": "PAUSED_CORPORATE_ACTION",
+      "amountUsd": 5,
+      "tx": "0x46e588c70d244472529994ebe1d2c719fb6c859faa9b207853e6888ca913168e",
+      "block": 59649666
+    },
+    {
+      "refused": false,
+      "reason": null,
+      "amountUsd": 5,
+      "tx": "0xb700ed4f7125d42feb061781cdafd1f2d3fc983ab0ee5bf666b6ab7805a054ba",
+      "block": 59648497
     }
   ]
 }
