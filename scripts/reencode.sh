@@ -15,3 +15,4 @@ done
 : > "$OUT/list.txt"; for c in "$OUT"/clips/*.mp4; do echo "file '$PWD/$c'" >> "$OUT/list.txt"; done
 ffmpeg -y -loglevel error -f concat -safe 0 -i "$OUT/list.txt" -c copy "$OUT/reserve-demo-silent.mp4"
 ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT/reserve-demo-silent.mp4"
+rm -rf "$OUT/clips" "$OUT/list.txt"   # keep only the final MP4
