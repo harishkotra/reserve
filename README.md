@@ -109,8 +109,8 @@ cd service && npx tsx src/client.ts             # pays and prints the settlement
 
 ## The demo video
 
-`assets/video/reserve-demo-silent.mp4` — 67s, 1920x1080, no audio on purpose. The narration to
-record over it is `docs/narration.md`, timed per slide.
+`assets/video/reserve-demo-silent.mp4` — 67s, 1920x1080, no audio on purpose; the voice over is
+recorded separately, timed per slide.
 
 ```bash
 ./scripts/make-video.sh     # re-render slides + reassemble
